@@ -5,17 +5,14 @@
     android:layout_height="match_parent"
     android:background="@color/white"
     xmlns:app="http://schemas.android.com/apk/res-auto">
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
         <LinearLayout
             android:id="@+id/headingLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/containerLinearLayout"
             android:background="@drawable/details_heading_bg"
             android:layout_marginBottom="10dp"
             android:layout_marginLeft="5dp"
@@ -40,81 +37,89 @@
                 android:textSize="30sp" />
         </LinearLayout>
         <LinearLayout
-            android:id="@+id/nameLayout"
-            android:layout_width="match_parent"
+            android:id="@+id/containerLinearLayout"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
             android:orientation="horizontal"
-            android:weightSum="2.5"
-            >
-            <TextView
-                android:layout_width="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/headingLayout"
+            android:layout_marginTop="30dp"
+            android:weightSum="2">
+            <LinearLayout
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:textSize="27sp"
-                android:text="Name"
+                android:orientation="vertical"
+                android:layout_weight="0.66"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="27sp"
+                    android:text="Name"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="27sp"
+                    android:text="State"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="20dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="27sp"
+                    android:text="Phone No."
+                    android:layout_weight="1"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="30dp"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
                 android:layout_weight="1"
-                android:layout_marginLeft="5dp"/>
-            <EditText
-                android:layout_width="200dp"
-                android:layout_height="wrap_content"
-                android:textSize="27sp"
-                android:layout_weight="1.5"
-                android:layout_marginRight="5dp"
-                android:inputType="text"/>
+                android:layout_gravity="right"
 
+                >
+                <EditText
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="27sp"
+                    android:layout_weight="1.5"
+                    android:layout_marginRight="5dp"
+                    android:inputType="text"/>
+
+                <EditText
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1.5"
+                    android:inputType="text"
+                    android:textSize="27sp" />
+
+                <EditText
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="27sp"
+                    android:layout_weight="1.5"
+                    android:layout_marginRight="5dp"
+                    android:inputType="text"/>
+            </LinearLayout>
         </LinearLayout>
-        <LinearLayout
-            android:id="@+id/cityLayout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:weightSum="2.5"
-            >
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="27sp"
-                android:text="State"
-                android:layout_weight="1"
-                android:layout_marginLeft="5dp"/>
-            <EditText
-                android:layout_width="200dp"
-                android:layout_height="wrap_content"
-                android:textSize="27sp"
-                android:layout_weight="1.5"
-                android:layout_marginRight="5dp"
-                android:inputType="text"/>
-
-        </LinearLayout>
-        <LinearLayout
-            android:id="@+id/phoneLayout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:weightSum="2.5"
-            >
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="27sp"
-                android:text="Phone No."
-                android:layout_weight="1"
-                android:layout_marginLeft="5dp"/>
-            <EditText
-                android:layout_width="200dp"
-                android:layout_height="wrap_content"
-                android:textSize="27sp"
-                android:layout_weight="1.5"
-                android:layout_marginRight="5dp"/>
-
-        </LinearLayout>
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="40dp"
-            android:text="Submit"
-            android:textSize="20sp"
-            android:backgroundTint="#FF9800"/>
-
-    </LinearLayout>
+    <Button
+        android:id="@+id/submitButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/containerLinearLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_gravity="center"
+        android:layout_marginTop="40dp"
+        android:text="Submit"
+        android:textSize="20sp"
+        android:backgroundTint="#FF9800"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
