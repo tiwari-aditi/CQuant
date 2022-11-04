@@ -5,120 +5,120 @@
     android:layout_height="match_parent"
     android:background="@color/white"
     xmlns:app="http://schemas.android.com/apk/res-auto">
-        <LinearLayout
-            android:id="@+id/headingLayout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toTopOf="@+id/containerLinearLayout"
-            android:background="@drawable/details_heading_bg"
-            android:layout_marginBottom="10dp"
-            android:layout_marginLeft="5dp"
-            android:layout_marginTop="5dp"
-            android:layout_marginRight="5dp">
+    <LinearLayout
+        android:id="@+id/headingLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/containerLinearLayout"
+        android:background="@drawable/details_heading_bg"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="5dp">
 
-            <ImageView
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:src="@drawable/details"
-                android:layout_marginLeft="90dp"
-                android:layout_gravity="center"/>
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/details"
+            android:layout_marginLeft="90dp"
+            android:layout_gravity="center"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:fontFamily="@font/doppio_one"
+            android:text="Your Details"
+            android:textColor="#503002"
+            android:textSize="30sp" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/containerLinearLayout"
+        android:baselineAligned="false"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/headingLayout"
+        android:layout_marginTop="30dp"
+        android:weightSum="2">
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="0.66"
+            >
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginLeft="10dp"
-                android:fontFamily="@font/doppio_one"
-                android:text="Your Details"
-                android:textColor="#503002"
-                android:textSize="30sp" />
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp"
+                android:text="Name"
+                android:fontFamily="@font/belleza"
+                android:textStyle="bold"
+                android:textSize="27sp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="27sp"
+                android:text="State/ UTs"
+                android:fontFamily="@font/belleza"
+                android:textStyle="bold"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="20dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="27sp"
+                android:text="Phone No."
+                android:fontFamily="@font/belleza"
+                android:textStyle="bold"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="30dp"/>
         </LinearLayout>
         <LinearLayout
-            android:id="@+id/containerLinearLayout"
-            android:baselineAligned="false"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:orientation="horizontal"
-            app:layout_constraintTop_toBottomOf="@+id/headingLayout"
-            android:layout_marginTop="30dp"
-            android:weightSum="2">
-            <LinearLayout
-                android:layout_width="0dp"
+            android:orientation="vertical"
+            android:layout_weight="1.34"
+            android:layout_gravity="right"
+
+            >
+            <EditText
+                android:layout_width="250dp"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_weight="0.66"
-                >
+                android:textSize="27sp"
+                android:layout_marginRight="5dp"
+                android:inputType="text"
+                android:background="@drawable/entries_bg"
+                />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="5dp"
-                    android:layout_marginTop="10dp"
-                    android:text="Name"
-                    android:fontFamily="@font/belleza"
-                    android:textStyle="bold"
-                    android:textSize="27sp" />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textSize="27sp"
-                    android:text="State/ UTs"
-                    android:fontFamily="@font/belleza"
-                    android:textStyle="bold"
-                    android:layout_marginLeft="5dp"
-                    android:layout_marginTop="20dp"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textSize="27sp"
-                    android:text="Phone No."
-                    android:fontFamily="@font/belleza"
-                    android:textStyle="bold"
-                    android:layout_marginLeft="5dp"
-                    android:layout_marginTop="30dp"/>
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="0dp"
+            <Spinner
+                android:id="@+id/States"
+                android:layout_width="210dp"
+                android:layout_height="37dp"
+                android:spinnerMode="dialog"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/entries_bg"
+                />
+
+
+            <EditText
+                android:layout_width="250dp"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_weight="1.34"
-                android:layout_gravity="right"
-
-                >
-                <EditText
-                    android:layout_width="250dp"
-                    android:layout_height="wrap_content"
-                    android:textSize="27sp"
-                    android:layout_marginRight="5dp"
-                    android:inputType="text"
-                    android:background="@drawable/entries_bg"
-                    />
-
-                <Spinner
-                    android:id="@+id/States"
-                    android:layout_width="210dp"
-                    android:layout_height="37dp"
-                    android:spinnerMode="dialog"
-                    android:layout_marginTop="10dp"
-                    android:background="@drawable/entries_bg"
-                    />
-
-
-                <EditText
-                    android:layout_width="250dp"
-                    android:layout_height="wrap_content"
-                    android:textSize="27sp"
-                    android:layout_marginRight="5dp"
-                    android:background="@drawable/entries_bg"
-                    android:inputType="text"
-                    android:layout_marginTop="15dp"/>
-            </LinearLayout>
+                android:textSize="27sp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/entries_bg"
+                android:inputType="text"
+                android:layout_marginTop="15dp"/>
         </LinearLayout>
+    </LinearLayout>
     <Button
         android:id="@+id/submitButton"
         android:layout_width="wrap_content"
