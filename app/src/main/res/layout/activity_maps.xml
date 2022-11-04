@@ -1,9 +1,96 @@
 <?xml version="1.0" encoding="utf-8"?>
-<fragment xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:map="http://schemas.android.com/apk/res-auto"
+<RelativeLayout xmlns:map="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/map"
-    android:name="com.google.android.gms.maps.SupportMapFragment"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MapsActivity" />
+    android:background="@color/white"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="480dp"
+        android:padding="10dp"
+        tools:context=".MapsActivity" />
+
+    <Button
+        android:id="@+id/to_button"
+        android:layout_width="60dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/map"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:background="#0779AC"
+        android:layout_centerHorizontal="true"
+        android:onClick="onClick"
+        android:text="To"
+        android:textAllCaps="false"
+        android:textSize="18sp" />
+    <TextView
+        android:id="@+id/dis"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Distance = "
+        android:textColor="@color/black"
+        android:fontFamily="sans-serif-black"
+        android:textSize="18sp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/to_button"
+        android:layout_marginTop="20dp"
+        />
+    <TextView
+        android:id="@+id/num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textSize="15sp"
+        android:textColor="@color/black"
+        android:fontFamily="sans-serif-black"
+        android:layout_toRightOf="@+id/dis"
+        android:layout_below="@+id/to_button"
+        android:layout_marginTop="22dp"
+        android:layout_marginStart="18dp"/>
+    <Button
+        android:id="@+id/calculator"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:text="CO2 Calculator"
+        android:textSize="15sp"
+        android:textAllCaps="false"
+        android:background="#298E04"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/dis"
+        android:layout_marginTop="60dp"/>
+    <Button
+        android:id="@+id/AR"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:text="AR"
+        android:textSize="15sp"
+        android:textAllCaps="false"
+        android:background="#298E04"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/dis"
+        android:layout_marginTop="60dp"
+        android:layout_marginStart="10dp" />
+    <Button
+        android:id="@+id/ngo"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:text="NGO's"
+        android:textSize="15sp"
+        android:textAllCaps="false"
+        android:background="#298E04"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/dis"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="10dp" />
+
+
+
+</RelativeLayout>
