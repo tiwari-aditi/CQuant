@@ -71,6 +71,15 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
 
+        Button ngo = findViewById(R.id.ngo);
+        ngo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent1 = new Intent(getApplicationContext(),NGOs.class);
+                startActivity(intent1);
+            }
+        });
+
 
     }
 
@@ -225,6 +234,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                     startActivity(intent);
                 }
             });
+
+
 
 
 

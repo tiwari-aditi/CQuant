@@ -27,6 +27,15 @@ public class emission extends AppCompatActivity implements AdapterView.OnItemSel
         ArrayAdapter<String> adapter = new ArrayAdapter<>(getApplicationContext(), android.R.layout.simple_spinner_dropdown_item, items);
         vehicle.setAdapter(adapter);
 
+        Button back = findViewById(R.id.back_emission);
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(),MapsActivity.class);
+                startActivity(intent);
+            }
+        });
+
 
 
 
@@ -173,6 +182,8 @@ public class emission extends AppCompatActivity implements AdapterView.OnItemSel
 
             }
         });
+
+
 
 
 
