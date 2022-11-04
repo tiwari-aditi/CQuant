@@ -38,6 +38,7 @@
         </LinearLayout>
         <LinearLayout
             android:id="@+id/containerLinearLayout"
+            android:baselineAligned="false"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             app:layout_constraintStart_toStartOf="parent"
@@ -52,20 +53,23 @@
                 android:orientation="vertical"
                 android:layout_weight="0.66"
                 >
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="27sp"
-                    android:text="Name"
-                    android:layout_weight="1"
                     android:layout_marginLeft="5dp"
-                    android:layout_marginTop="10dp"/>
+                    android:layout_marginTop="10dp"
+                    android:text="Name"
+                    android:fontFamily="@font/belleza"
+                    android:textStyle="bold"
+                    android:textSize="27sp" />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="27sp"
-                    android:text="State"
-                    android:layout_weight="1"
+                    android:text="State/ UTs"
+                    android:fontFamily="@font/belleza"
+                    android:textStyle="bold"
                     android:layout_marginLeft="5dp"
                     android:layout_marginTop="20dp"/>
                 <TextView
@@ -73,7 +77,8 @@
                     android:layout_height="wrap_content"
                     android:textSize="27sp"
                     android:text="Phone No."
-                    android:layout_weight="1"
+                    android:fontFamily="@font/belleza"
+                    android:textStyle="bold"
                     android:layout_marginLeft="5dp"
                     android:layout_marginTop="30dp"/>
             </LinearLayout>
@@ -81,33 +86,37 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:layout_weight="1"
+                android:layout_weight="1.34"
                 android:layout_gravity="right"
 
                 >
                 <EditText
-                    android:layout_width="200dp"
+                    android:layout_width="250dp"
                     android:layout_height="wrap_content"
                     android:textSize="27sp"
-                    android:layout_weight="1.5"
                     android:layout_marginRight="5dp"
-                    android:inputType="text"/>
-
-                <EditText
-                    android:layout_width="200dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginRight="5dp"
-                    android:layout_weight="1.5"
                     android:inputType="text"
-                    android:textSize="27sp" />
+                    android:background="@drawable/entries_bg"
+                    />
+
+                <Spinner
+                    android:id="@+id/States"
+                    android:layout_width="210dp"
+                    android:layout_height="37dp"
+                    android:spinnerMode="dialog"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/entries_bg"
+                    />
+
 
                 <EditText
-                    android:layout_width="200dp"
+                    android:layout_width="250dp"
                     android:layout_height="wrap_content"
                     android:textSize="27sp"
-                    android:layout_weight="1.5"
                     android:layout_marginRight="5dp"
-                    android:inputType="text"/>
+                    android:background="@drawable/entries_bg"
+                    android:inputType="text"
+                    android:layout_marginTop="15dp"/>
             </LinearLayout>
         </LinearLayout>
     <Button
