@@ -36,6 +36,15 @@ public class emission extends AppCompatActivity implements AdapterView.OnItemSel
             }
         });
 
+        Button leader = findViewById(R.id.leader);
+        leader.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent1 = new Intent(getApplicationContext(),Leaderboard.class);
+                startActivity(intent1);
+            }
+        });
+
 
 
 

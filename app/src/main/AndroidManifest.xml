@@ -19,6 +19,27 @@
         android:theme="@style/Theme.CQuant"
         tools:targetApi="31">
         <activity
+            android:name=".Leaderboard"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".sign_up"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".login"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".NGOs"
             android:exported="false">
             <meta-data

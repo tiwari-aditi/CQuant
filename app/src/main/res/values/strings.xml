@@ -1,4 +1,33 @@
 <resources>
     <string name="app_name">CQuant</string>
     <string name="title_activity_maps">MapsActivity</string>
+    <string-array name="user">
+        <item>sk015@gmail.com</item>
+        <item>varun12@gmail.com</item>
+        <item>hac@gmail.com</item>
+        <item>dhruv34@gmail.com</item>
+        <item>Sap@gmail.com</item>
+        <item>rahu23@gmail.com</item>
+        <item>rohan00@gmail.com</item>
+        <item>C45@gmail.com</item>
+        <item>Ruby57@gmail.com</item>
+        <item>Rai02@gmail.com</item>
+        <item>naru60@gmail.com</item>
+        <item>Perl32@gmail.com</item>
+    </string-array>
+    <string-array name="rank">
+        <item>1.</item>
+        <item>2.</item>
+        <item>3.</item>
+        <item>4.</item>
+        <item>5.</item>
+        <item>6.</item>
+        <item>7.</item>
+        <item>8.</item>
+        <item>9.</item>
+        <item>10.</item>
+        <item>11.</item>
+        <item>12.</item>
+
+    </string-array>
 </resources>
